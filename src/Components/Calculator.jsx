@@ -1,84 +1,64 @@
-import React, { useState } from 'react';
-import { evaluate } from 'mathjs';
-import Display from './Display';
-import Button from './Button';
+import { useState } from 'react';
 
 const Calculator = () => {
-  const [expression, setExpression] = useState('0');
+  const [input, setInput] = useState('0');
 
   const handleClick = (value) => {
-    // Clear
-    if (value === 'AC') {
-      setExpression('0');
-      return;
-    }
-
-    // Toggle +/-
-    if (value === '+/-') {
-      try {
-        setExpression((parseFloat(expression) * -1).toString());
-      } catch {
-        setExpression('0');
-      }
-      return;
-    }
-
-    // Percent
-    if (value === '%') {
-      try {
-        const lastNumber = expression.match(/(\d+\.?\d*)$/);
-        if (lastNumber) {
-          const percent = parseFloat(lastNumber[0]) / 100;
-          const newExp = expression.replace(/(\d+\.?\d*)$/, percent.toString());
-          setExpression(newExp);
-        }
-      } catch {
-        setExpression('0');
-      }
-      return;
-    }
-
-    // Equals
-    if (value === '=') {
-      try {
-        const formatted = expression.replace(/x/g, '*').replace(/÷/g, '/');
-        const result = evaluate(formatted);
-        setExpression(result.toString());
-      } catch {
-        setExpression('Error');
-      }
-      return;
-    }
-
-    // Prevent replacing 0 with another number
-    if (expression === '0' && !['+', '-', 'x', '÷', '.'].includes(value)) {
-      setExpression(value);
+    if (input === '0') {
+      setInput(value);
     } else {
-      setExpression(expression + value);
+      setInput(input + value);
     }
   };
 
-  const buttons = [
-    'AC', '+/-', '%', '÷',
-    '7', '8', '9', 'x',
-    '4', '5', '6', '-',
-    '1', '2', '3', '+',
-    '0', '.', '=',
-  ];
+  const clearInput = () => {
+    setInput('0');
+  };
+
+  const deleteLast = () => {
+    if (input.length === 1) {
+      setInput('0');
+    } else {
+      setInput(input.slice(0, -1));
+    }
+  };
+
+  const calculateResult = () => {
+    try {
+      setInput(eval(input).toString());
+    } catch (error) {
+      setInput('Error');
+    }
+  };
 
   return (
-    <div className="calculator">
-      <Display expression={expression} />
+    <div className="Calculator">
+      <div className="display">{input}</div>
 
       <div className="buttons">
-        {buttons.map((btn) => (
-          <Button
-            key={btn}
-            label={btn}
-            onClick={handleClick}
-            className={btn === '0' ? 'zero' : ''}
-          />
-        ))}
+        <button onClick={clearInput}>AC</button>
+        <button onClick={deleteLast}>DEL</button>
+        <button onClick={() => handleClick('%')}>%</button>
+        <button onClick={() => handleClick('/')}>÷</button>
+
+        <button onClick={() => handleClick('7')}>7</button>
+        <button onClick={() => handleClick('8')}>8</button>
+        <button onClick={() => handleClick('9')}>9</button>
+        <button onClick={() => handleClick('*')}>×</button>
+
+        <button onClick={() => handleClick('4')}>4</button>
+        <button onClick={() => handleClick('5')}>5</button>
+        <button onClick={() => handleClick('6')}>6</button>
+        <button onClick={() => handleClick('-')}>−</button>
+
+        <button onClick={() => handleClick('1')}>1</button>
+        <button onClick={() => handleClick('2')}>2</button>
+        <button onClick={() => handleClick('3')}>3</button>
+        <button onClick={() => handleClick('+')}>+</button>
+
+        <button onClick={() => handleClick('0')} className="zero">0</button>
+        <button onClick={() => handleClick('.')}>.</button>
+        <button onClick={calculateResult}>=</button>
       </div>
     </div>
   );

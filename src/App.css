@@ -1,67 +1,95 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
 }
 
-.app{
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 80px;
-font-family: Arial, Helvetica, sans-serif;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #361515;
+  padding: 20px 40px;
+  border-bottom: 3px solid #dddddd;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  color: orange;
+}
+
+.page {
+  max-width: 1000px;
+  margin: auto;
+   padding: 30px 40px;
+   font-size: 18px;
+
+}
+
+.calculator-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
   
 }
+.calculator-page h2 {
+  color: #361515;
+}
 
-.calculator {
+.Calculator {
   width: 320px;
-  margin: 4px auto;
-  background: #f5f5f5;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(186 81 81 20%);
-  font-size: 40px;
-
+  border-radius: 30px;
+  box-shadow: 0 8px 20px;
 }
 
 .display {
-  background: #858694;
-  color: black;
+  background: #361515;
+  color: orange;
   font-size: 20px;
   text-align: right;
- padding: 20px;
-  font-weight: bold;
-
+  padding: 20px;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-
 }
 
-button  {
-  height: 65px;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
-  background: #e0e0e0;
+.buttons button {
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
   cursor: pointer;
-  color:black;
+  background: white;
 }
 
+.buttons button:hover {
+  background: #361515;
+  color: orange;
+}
+
+.buttons button:last-child,
 .buttons button:nth-child(4),
 .buttons button:nth-child(8),
 .buttons button:nth-child(12),
-.buttons button:nth-child(16),
-.buttons button:nth-child(19) {
-  background: #f5913e;
-  color: white;
+.buttons button:nth-child(16) {
+  background: #361515;
+  color: orange
 }
 
 .zero {
   grid-column: span 2;
-  
-  
 }
