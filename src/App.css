@@ -10,7 +10,12 @@ body {
   align-items: center;
   background: #361515;
   padding: 20px 40px;
-  border-bottom: 3px solid #dddddd;
+  border-bottom: 3px solid #ddd;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
 }
 
 .nav-links {
@@ -21,7 +26,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -32,18 +37,17 @@ body {
 .page {
   max-width: 1000px;
   margin: auto;
-   padding: 30px 40px;
-   font-size: 18px;
-
+  padding: 30px 40px;
+  font-size: 18px;
 }
 
 .calculator-page {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
-  
 }
+
 .calculator-page h2 {
   color: #361515;
 }

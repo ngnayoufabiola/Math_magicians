@@ -1,0 +1,95 @@
+/* Container styling */
+.page {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  -webkit-animation: fadein 1.5s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+/* Heading slide-in */
+.page h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Paragraph hover */
+.page p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.page p:hover {
+  color: #000;
+  opacity: 0.8;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+}
+
+/* Subtle page hover lift */
+.page:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+}
