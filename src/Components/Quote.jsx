@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import '../assets/Quote.css';
+import  ApiKey  from '../env.js';
 
 const Quote = () => {
   const [quote, setQuote] = useState('Loading...');
 
   const fetchQuote = async () => {
     try {
-      const response = await fetch(
-        'https://api.api-ninjas.com/v1/quotes',
+      const response = await fetch('https://api.api-ninjas.com/v1/quotes',
         {
           method: 'GET',
           headers: {
-            'X-Api-Key': 'RIhFjhRS0zMNSscKGu4HTZIQTjBZ1ybNRDoQnCpo',
+            'X-Api-Key': ApiKey,
           },
         },
       );
