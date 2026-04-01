@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import '../assets/Quote.css';
-import  ApiKey  from '../env.js';
 
 const Quote = () => {
   const [quote, setQuote] = useState('Loading...');
@@ -11,7 +10,7 @@ const Quote = () => {
         {
           method: 'GET',
           headers: {
-            'X-Api-Key': ApiKey,
+            'X-Api-Key': import.meta.env.VITE_API_KEY,
           },
         },
       );
