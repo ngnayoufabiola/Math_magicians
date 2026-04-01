@@ -1,0 +1,136 @@
+/* General container */
+.page {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff, #f7f7f7);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  -webkit-animation: fadeIn 1.5s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Home page special styling */
+.home-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background glow */
+.home-page::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 165, 0, 0.15);
+  border-radius: 50%;
+  top: -60px;
+  left: -60px;
+  z-index: 0;
+}
+
+.home-page::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(54, 21, 21, 0.08);
+  border-radius: 50%;
+  bottom: -50px;
+  right: -50px;
+  z-index: 0;
+}
+
+/* Keep text above background shapes */
+.home-page h2,
+.home-page p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+/* Heading styling */
+.home-page h2 {
+  font-size: 2.3rem;
+  color: #361515;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease forwards;
+  -webkit-animation: slidein 1s ease forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Paragraph styling */
+.home-page p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+/* Paragraph hover */
+.home-page p:hover {
+  color: #000;
+  opacity: 0.9;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+}
+
+/* Card hover effect */
+.page:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+}

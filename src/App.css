@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #361515;
+  padding: 20px 40px;
+  border-bottom: 3px solid #ddd;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  color: orange;
+}
+
+.page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 40px;
+  font-size: 18px;
+}
+
+.calculator-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.calculator-page h2 {
+  color: #361515;
+}
+
+.Calculator {
+  width: 320px;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px;
+}
+
+.display {
+  background: #361515;
+  color: orange;
+  font-size: 20px;
+  text-align: right;
+  padding: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: white;
+}
+
+.buttons button:hover {
+  background: #361515;
+  color: orange;
+}
+
+.buttons button:last-child,
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12),
+.buttons button:nth-child(16) {
+  background: #361515;
+  color: orange
+}
+
+.zero {
+  grid-column: span 2;
+}
