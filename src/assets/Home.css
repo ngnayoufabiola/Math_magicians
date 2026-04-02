@@ -1,6 +1,7 @@
 /* General container */
 .page {
-  max-width: 800px;
+  width: min(90vw, 1000px);
+  max-width: 1000px;
   margin: 60px auto;
   padding: 40px 30px;
   text-align: center;
@@ -9,7 +10,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   opacity: 0;
   animation: fadeIn 1.5s forwards;
-  -webkit-animation: fadeIn 1.5s forwards;
+  -webkit-animation: fadein 1.5s forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
