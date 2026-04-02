@@ -3,7 +3,8 @@ import Header from './Components/header';
 import Home from './Components/Home';
 import CalculatorPage from './Components/CalculatorPage';
 import Quote from './Components/Quote';
-import './App.css';
+import './assets/App.css';
+
 
 const App = () => (
   <Router>

@@ -28,3 +28,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.quote-btn:hover {
+  background-color: #fff;
+  color: #361515;
+  box-shadow: 0 8px 20px rgba(252, 2, 2, 20%);
+}

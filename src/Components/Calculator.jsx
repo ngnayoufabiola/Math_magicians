@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
+import '../assets/Calculator.css';
 
 const Calculator = () => {
   const [input, setInput] = useState('0');
