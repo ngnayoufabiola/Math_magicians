@@ -1,0 +1,302 @@
+@import '../assets/Home.css';
+@import '../assets/Header.css';
+@import '../assets/Quote.css';
+@import '../assets/Calculator.css';
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background: #361515;
+    padding: 20px;
+    border-bottom: 3px solid #ddd;
+  }
+
+  .navbar h1 {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .nav-links a.active {
+    color: orange;
+  }
+
+
+  /* General container */
+  .page {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff, #f7f7f7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    -webkit-animation: fadein 1.5s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Home page special styling */
+  .home-page {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative background glow */
+  .home-page::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: rgba(255, 165, 0, 0.15);
+    border-radius: 50%;
+    top: -60px;
+    left: -60px;
+    z-index: 0;
+  }
+
+  .home-page::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(54, 21, 21, 0.08);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    z-index: 0;
+  }
+
+  /* Keep text above background shapes */
+  .home-page h2,
+  .home-page p {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+  }
+
+  /* Heading styling */
+  .home-page h2 {
+    font-size: 2.3rem;
+    color: #361515;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease forwards;
+    -webkit-animation: slidein 1s ease forwards;
+  }
+
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slideIn {
+    from {
+      -webkit-transform: translateX(-30px);
+      opacity: 0;
+    }
+
+    to {
+      -webkit-transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Paragraph styling */
+  .home-page p {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+  }
+
+  /* Paragraph hover */
+  .home-page p:hover {
+    color: #000;
+    opacity: 0.9;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+  }
+
+  /* Card hover effect */
+  .page:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+  }
+
+  .calculator-page {
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .calculator-page h2 {
+    color: #361515;
+  }
+
+  .Calculator {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px;
+  }
+
+  .display {
+    background: #361515;
+    color: orange;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px;
+    display: flex;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .buttons button {
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: white;
+  }
+
+  .buttons button:hover {
+    background: #361515;
+    color: orange;
+  }
+
+  .buttons button:last-child,
+  .buttons button:nth-child(4),
+  .buttons button:nth-child(8),
+  .buttons button:nth-child(12),
+  .buttons button:nth-child(16) {
+    background: #361515;
+    color: orange
+  }
+
+  .zero {
+    grid-column: span 2;
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(135deg, #361515, #fff);
+    box-shadow: 0 8px 20px rgba(252, 2, 2, 20%);
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .quote-text {
+    font-size: 30px;
+    font-weight: 900;
+    color: #000;
+  }
+
+  .quote-btn {
+    padding: 20px 25px;
+    font-size: 18px;
+    background-color: #361515;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .quote-btn:hover {
+    background-color: #fff;
+    color: #361515;
+    box-shadow: 0 8px 20px rgba(252, 2, 2, 20%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #361515;
+    padding: 40px 40px;
+    border-bottom: 3px solid #ddd;
+  }
+
+  .navbar h1 {
+    color: white;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .nav-links a.active {
+    color: orange;
+  }
+}
