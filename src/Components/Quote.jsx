@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../assets/Quote.css';
+
 
 const Quote = () => {
   const [quote, setQuote] = useState('Loading...');
@@ -27,8 +27,15 @@ const Quote = () => {
   };
 
   useEffect(() => {
-    fetchQuote();
+    fetchQuote(); // fetch first quote immediately
+
+    const interval = setInterval(() => {
+      fetchQuote(); // fetch new quote every 10seconds
+    }, 10000);
+
+    return () => clearInterval(interval); // clean up when leaving page
   }, []);
+
 
   return (
     <div className="quote-container">

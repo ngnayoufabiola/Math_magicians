@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
+
 const Header = () => (
   <nav className="navbar">
     <h1>Math Magicians</h1>
