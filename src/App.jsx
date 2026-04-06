@@ -5,7 +5,6 @@ import CalculatorPage from './Components/CalculatorPage';
 import Quote from './Components/Quote';
 import './assets/App.css';
 
-
 const App = () => (
   <Router>
     <Header />

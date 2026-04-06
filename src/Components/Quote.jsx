@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-
 const Quote = () => {
   const [quote, setQuote] = useState('Loading...');
 
@@ -12,8 +11,7 @@ const Quote = () => {
           headers: {
             'X-Api-Key': import.meta.env.VITE_API_KEY,
           },
-        },
-      );
+        });
 
       if (!response.ok) {
         throw new Error('Failed to fetch');
@@ -35,7 +33,6 @@ const Quote = () => {
 
     return () => clearInterval(interval); // clean up when leaving page
   }, []);
-
 
   return (
     <div className="quote-container">

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,9 +17,10 @@ const Header = () => {
       <h1>Math Magicians</h1>
 
       <button
+        type="button"
         className="hamburger"
         onClick={toggleMenu}
-        
+
       >
         {menuOpen ? '✖' : '☰'}
       </button>

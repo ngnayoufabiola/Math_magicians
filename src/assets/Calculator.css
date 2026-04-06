@@ -61,7 +61,7 @@ body {
 .buttons button:nth-child(12),
 .buttons button:nth-child(16) {
   background: #361515;
-  color: orange
+  color: orange;
 }
 
 .zero {
