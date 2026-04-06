@@ -33,3 +33,7 @@ body {
 .nav-links a.active {
   color: orange;
 }
+.hamburger {
+  display: none;
+  ;
+}
