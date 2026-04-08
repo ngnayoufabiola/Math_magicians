@@ -9,12 +9,12 @@ describe('Calculator Component', () => {
     expect(screen.getByTestId('display')).toHaveTextContent('0');
   });
   test('renders calculator on the screen', () => {
-  render(<Calculator />);
+    render(<Calculator />);
 
-  expect(screen.getByTestId('display')).toBeInTheDocument();
-  expect(screen.getByText('AC')).toBeInTheDocument();
-  expect(screen.getByText('=')).toBeInTheDocument();
-});
+    expect(screen.getByTestId('display')).toBeInTheDocument();
+    expect(screen.getByText('AC')).toBeInTheDocument();
+    expect(screen.getByText('=')).toBeInTheDocument();
+  });
 
   test('updates display when number buttons are clicked', () => {
     render(<Calculator />);
@@ -99,14 +99,13 @@ describe('Calculator Component', () => {
     expect(screen.getByTestId('display')).toHaveTextContent('1');
   });
   test('multiplies 4 and 5 correctly', () => {
-  render(<Calculator />);
+    render(<Calculator />);
 
-  fireEvent.click(screen.getByText('4'));
-  fireEvent.click(screen.getByText('×'));
-  fireEvent.click(screen.getByText('5'));
-  fireEvent.click(screen.getByText('='));
+    fireEvent.click(screen.getByText('4'));
+    fireEvent.click(screen.getByText('×'));
+    fireEvent.click(screen.getByText('5'));
+    fireEvent.click(screen.getByText('='));
 
-  expect(screen.getByTestId('display')).toHaveTextContent('20');
-});
-  
+    expect(screen.getByTestId('display')).toHaveTextContent('20');
+  });
 });
