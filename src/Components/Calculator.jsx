@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { evaluate } from 'mathjs';
 import '../assets/Calculator.css';
 
@@ -35,8 +35,7 @@ const Calculator = () => {
 
   return (
     <div className="Calculator">
-      <div className="display">{input}</div>
-
+      <div className="display" data-testid="display">{input}</div>
       <div className="buttons">
         <button type="button" onClick={clearInput}>AC</button>
         <button type="button" onClick={deleteLast}>DEL</button>
