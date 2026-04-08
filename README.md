@@ -1,203 +1,132 @@
-# 📘 Math_Magicians
+<a name="readme-top"></a>
 
-Math Magicians is a React-based Single Page Application (SPA) built for mathematics lovers.  
-It allows users to perform basic calculations through an interactive calculator and also read a random math-related quote.
+<div align="center">
 
-This project was built as part of a front-end development learning journey using React, Vite, and modern JavaScript practices.
+  <br/>
 
----
+  <h1><b>math_magicians</b></h1>
 
-## 🚀 Live Demo
+</div>
 
-> Add your deployed project link here when available  
- [Live Demo](https://math-magicians-r79n.onrender.com)
+## 📗 Table of Contents
 
----
+- [📖 About the Project](#Math Magicians is a single-page application built with React that allows users to perform mathematical calculations and read inspirational math-related quotes.
+The project demonstrates the use of React components, React Router, state management, API fetching, and responsive design.
+It was created as part of a learning project to practice building modern web applications with React.)
+  - [🛠 Built With](React,JavaScript (ES6),CSS,React RouterVite,Vitest,React Testing Library)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-## 🛠 Built With
+# 📖 my math_magicians website <a name="math_magicians"></a>
 
-- **React**  
-- **Vite**
-- **JavaScript (ES6)**
-- **CSS3**
-- **HTML5**
-- **React Router**
-- **Math.js**
-- **Vitest**
-- **React Testing Library**
-- **Jest DOM**
+A front-end project built with HTML, CSS,JavaScrip and reast, designed from a custom Figma prototype and version-controlled with Git and Gitflow.
 
----
+*[ my math_magicians website]* is a HTML CSS  Javascriptand Reacts project
 
-## ✨ Features
+## 🛠 Built With <a name="built-with React"></a>
 
--  Perform basic arithmetic calculations
--  Addition
--  Subtraction
--  Multiplication
--  Division
--  Modulo operation
--  Clear and delete calculator input
--  Responsive design for desktop and mobile
--  Multi-page navigation with React Router
--  Random math-related quote page
--  Unit and component testing with Vitest
+### Tech Stack <a name="tech-stack"></a>
 
----
+- HTML
+- CSS
+- Linters
+- JavaScript
+- React
 
-## 🧮 Calculator Functions
+### Key Features <a name="key-features"></a>
 
-The calculator supports the following buttons:
+- Responsive Design: Fully optimized layout that adapts smoothly to mobile, tablet, and desktop screens.
+- Figma-to-Code Implementation: UI built directly from a custom Figma design, ensuring pixel-perfect structure and consistent styling.
+- Clean & Modular Code: Well-organized HTML, CSS,  JavaScript and React with reusable components and Git/GitHub/Gitflow version control.
 
-- `AC` → Clears the entire display
-- `DEL` → Deletes the last entered character
-- `%` → Modulo operation
-- `÷` → Division
-- `×` → Multiplication
-- `−` → Subtraction
-- `+` → Addition
-- `=` → Calculates the result
+A demo link will be uploaded subsequently.
 
----
+## 💻 Getting Started <a name="getting-started"></a>
 
-## 🧪 Testing
+To get a local copy up and running, follow these steps.
 
-This project includes tests for the calculator component using:
+### Prerequisites
 
-- **Vitest**
-- **React Testing Library**
-- **Jest DOM**
+In order to run this project you need:
 
-### Tested Features
+- Visual Studio Code
 
-- Calculator renders correctly
-- Default display shows `0`
-- Number buttons update the display
-- `AC` clears the display
-- `DEL` removes the last digit
-- Arithmetic operations work correctly
 
+### Setup
+
+Clone this repository to your desired folder:
+
+sh
+   cd Math_magicians
+  git clone  https://github.com/ngnayoufabiola/Math_magicians.git
+
+
+### Install
+
+Install this project with:
+
+sh
+  cd Math_magicians
+  npm install
+  npm create vite@latest math_magicians
+
+
+
+### Usage
+npm run dev 
 ### Run tests
 
-```bash
-npm run test
-```
+To run tests, run the following command:
+sh
+  npx hint .
+  npx eslint "**/*.{js,jsx}"
+  npx stylelint "**/*.{css,scss}"
 
----
 
-## ⚙️ Getting Started
+### Deployment
 
-To get a local copy up and running, follow these simple steps.
+You can deploy this project using:
 
----
+sh
+  gh-pages
+  netlify
+  vercel
+  render (https://math-magicians-r79n.onrender.com)
 
-## 📥 Installation
+## 👥 Authors <a name="authors"></a>
 
-### 1. Clone the repository
+👤 *ngnayou fabiola*
 
-```bash
-git clone https://github.com/ngnayoufabiola/Math_magicians.git
+- GitHub: [ngnayou fabiola](https://github.com/ngnayoufabiola/fabiola_portfolio.git )
+-  
 
-npm create vite@lalest math_magicians
-```
+ FUTURE FEATURES 
 
-### 2. Navigate into the project folder
+ ## 🔭 Future Features <a name="future-features"></a>
 
-```bash
-cd Math_magicians
-```
+- Dark/Light Mode Toggle: Add theme switching for improved accessibility and user customization.
+- Interactive Dashboard/Components: Introduce dynamic sections (animations, charts, or advanced UI elements) to improve user engagement and functionality.
 
-### 3. Install dependencies
+## 🤝 Contributing <a name="contributing"></a>
 
-```bash
-npm install
-```
+Contributions, issues, and feature requests are welcome!
 
-### 4. Start the development server
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-```bash
-npm run dev
-```
+I will like to thank Codegisoft Academy and all the students i've collaborated with
 
-After running the command above, open your browser and visit the local server shown in your terminal.
+## 📝 License <a name="license"></a>
 
----
-
-## 💻 Usage
-
-Once the app is running:
-
-- Use the calculator to perform arithmetic operations
-- Navigate between pages using the menu
-- Visit the quote page to read a math-related quote
-
----
-
-## 📸 Screenshots
-
-> You can add screenshots here later for a more professional presentation.
-
-Suggested screenshots:
-- Home Page
-- Calculator Page
-- Quote Page
-- Mobile View
-
----
-
-## 👩‍💻 Author
-
-**Ngnayou Fabiola**
-
-- GitHub: [@ngnayoufabiola](https://github.com/ngnayoufabiola)
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-If you'd like to contribute:
-
-1. Fork the project
-2. Create your feature branch
-
-```bash
-git checkout -b feature/AmazingFeature
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add AmazingFeature"
-```
-
-4. Push to the branch
-
-```bash
-git push origin feature/AmazingFeature
-```
-
-5. Open a Pull Request
-
----
-
-## ⭐ Show your support
-
-If you like this project, please consider giving it a **star ⭐** on GitHub.
-
----
-
-## 📝 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## 🙏 Acknowledgements
-
-- React documentation
-- Vite documentation
-- Math.js documentation
-- React Testing Library documentation
-- Vitest documentation
+This project is [LICENSE.md](LICENCES.md) licensed.
